@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import { ArrowRight, Check } from 'lucide-react'
@@ -122,7 +122,7 @@ export default function DiscoveryPage() {
             <div>
               <p className="text-xs text-charcoal">Questions before proceeding?</p>
               <div className="flex gap-4 mt-1">
-                <a href="mailto:kevin@meridiansolutions.com" className="text-xs font-medium text-navy hover:text-gold transition">Email Kevin</a>
+                <a href="mailto:kevin@meridianadvisor.co" className="text-xs font-medium text-navy hover:text-gold transition">Email Kevin</a>
                 <a href={BOOKING_HREF} className="text-xs font-medium text-navy hover:text-gold transition">Schedule a quick call</a>
               </div>
             </div>

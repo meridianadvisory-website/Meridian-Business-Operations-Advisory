@@ -82,7 +82,7 @@ export default function ContactPage() {
               </div>
               <div className="border-t border-gray-200 pt-4">
                 <p className="text-xs font-semibold text-navy uppercase tracking-wider mb-1">Email</p>
-                <a href="mailto:kevin@meridiansolutions.com" className="text-sm text-charcoal hover:text-navy transition">kevin@meridiansolutions.com</a>
+                <a href="mailto:kevin@meridianadvisor.co" className="text-sm text-charcoal hover:text-navy transition">kevin@meridianadvisor.co</a>
               </div>
               <div className="border-t border-gray-200 pt-4">
                 <p className="text-xs font-semibold text-navy uppercase tracking-wider mb-1">Location</p>

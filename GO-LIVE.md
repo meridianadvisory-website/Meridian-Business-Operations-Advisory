@@ -215,7 +215,7 @@ v=spf1 include:_spf.google.com include:send.resend.com ~all
 |------|----------------|
 | `lib/constants.ts` | `CALENDLY_URL` â€” your real booking link |
 | `lib/constants.ts` | `SITE_URL` â€” confirm it's `https://meridianadvisor.co` |
-| `components/Footer.tsx` | Email address if different from `kevin@meridiansolutions.com` |
+| `components/Footer.tsx` | Email address if different from `kevin@meridianadvisor.co` |
 | Vercel env vars | `EMAIL_FROM` once domain is verified |
 
 ---

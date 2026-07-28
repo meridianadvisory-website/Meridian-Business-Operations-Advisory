@@ -117,7 +117,7 @@ export async function POST(request: NextRequest) {
     // 2. Notify Kevin
     await resend.emails.send({
       from: fromAddress,
-      to: 'kevin@meridiansolutions.com',
+      to: 'kevin@meridianadvisor.co',
       subject: `Calculator Lead: ${email} (${inputs?.employees || '?'} employees, est. ${formatCurrency(results?.totalCost || 0)}/yr)`,
       html: `
         <h2>New Operational Efficiency Calculator Lead</h2>

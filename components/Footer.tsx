@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Button from './ui/Button'
 import { CALENDLY_URL, SECTION_IDS } from '@/lib/constants'
@@ -56,7 +56,7 @@ export default function Footer() {
             We find where your hours go, price them, and fix the expensive ones. No new headcount.
           </p>
           <p style={{ color: 'var(--gray-2)', fontSize: '0.8rem', marginTop: '0.75rem' }}>
-            Atlanta, GA · <a href="mailto:kevin@meridiansolutions.com" style={{ color: 'var(--gray-2)', textDecoration: 'none' }}>kevin@meridiansolutions.com</a>
+            Atlanta, GA Â· <a href="mailto:kevin@meridianadvisor.co" style={{ color: 'var(--gray-2)', textDecoration: 'none' }}>kevin@meridianadvisor.co</a>
           </p>
         </div>
 

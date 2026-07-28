@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
     // Notify Kevin
     await resend.emails.send({
       from: fromAddress,
-      to: 'kevin@meridiansolutions.com',
+      to: 'kevin@meridianadvisor.co',
       subject: `Assessment Started: ${firstName} (${email})`,
       html: `
         <h2>New Assessment Lead</h2>

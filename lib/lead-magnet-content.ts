@@ -1,4 +1,4 @@
-import { CALENDLY_URL } from '@/lib/constants'
+﻿import { CALENDLY_URL } from '@/lib/constants'
 
 export interface Opportunity {
   number: number
@@ -55,16 +55,16 @@ export interface GuideContent {
 export const guideContent: GuideContent = {
   // Document metadata
   title: 'The 7 Operational Costs Professional Service Firms Overlook',
-  subtitle: 'Where billable hours disappear — and what it takes to get them back.',
+  subtitle: 'Where billable hours disappear â€” and what it takes to get them back.',
   author: 'Meridian Solutions, LLC',
   authorName: 'Kevin Barnett',
-  authorEmail: 'kevin@meridiansolutions.com',
+  authorEmail: 'kevin@meridianadvisor.co',
   footerTagline: 'Operations Consulting for Professional Service Firms',
 
   // Page 2: Opening Insight
   openingHeadline: 'Most firms are solving the wrong problem.',
   openingBody:
-    'Ask most firm owners where their time goes, and you\'ll hear two answers: client work and business development.\n\nBoth matter. Neither is where the biggest cost hides.\n\nThe real cost is buried in operations — rekeyed data, manual reports, missed follow-ups, tribal knowledge, poor routing, and billing leaks.',
+    'Ask most firm owners where their time goes, and you\'ll hear two answers: client work and business development.\n\nBoth matter. Neither is where the biggest cost hides.\n\nThe real cost is buried in operations â€” rekeyed data, manual reports, missed follow-ups, tribal knowledge, poor routing, and billing leaks.',
 
   // Page 3: The Pattern
   patternHeadline: 'The cost lives in the gaps between your tools, people, and processes.',
@@ -85,9 +85,9 @@ export const guideContent: GuideContent = {
       title: 'Speed-to-Quote',
       icon: 'stopwatch',
       theLeak:
-        'When a prospect asks for a price, the first business to respond usually wins — not the cheapest. Most SMBs take hours or days to turn an inquiry into a quote because someone has to stop what they\'re doing and build it by hand.',
+        'When a prospect asks for a price, the first business to respond usually wins â€” not the cheapest. Most SMBs take hours or days to turn an inquiry into a quote because someone has to stop what they\'re doing and build it by hand.',
       theAiOpportunity:
-        'AI can draft an accurate, on-brand estimate in minutes from the same inputs your team already collects — pulling from pricing history, job specs, and templates to generate a ready-to-send proposal.',
+        'AI can draft an accurate, on-brand estimate in minutes from the same inputs your team already collects â€” pulling from pricing history, job specs, and templates to generate a ready-to-send proposal.',
       businessImpact:
         'Faster close rate, fewer lost leads, more booked opportunities. Your team stops losing deals to whoever responded first.',
       whyOverlooked:
@@ -100,9 +100,9 @@ export const guideContent: GuideContent = {
       title: 'Missed Calls',
       icon: 'phone',
       theLeak:
-        'For home services, legal, and healthcare, a missed call is a lost customer — often a four- or five-figure one. Voicemail doesn\'t save it; the caller already dialed your competitor.',
+        'For home services, legal, and healthcare, a missed call is a lost customer â€” often a four- or five-figure one. Voicemail doesn\'t save it; the caller already dialed your competitor.',
       theAiOpportunity:
-        'An AI assistant that answers, qualifies, and books 24/7 turns those leaks back into revenue — capturing caller intent, scheduling appointments, and routing urgent requests without human involvement.',
+        'An AI assistant that answers, qualifies, and books 24/7 turns those leaks back into revenue â€” capturing caller intent, scheduling appointments, and routing urgent requests without human involvement.',
       businessImpact:
         'Recovered revenue from after-hours and overflow calls. No more lost customers to voicemail.',
       whyOverlooked:
@@ -117,7 +117,7 @@ export const guideContent: GuideContent = {
       theLeak:
         'Every business is sitting on a list of past customers and dead leads it never works again. These are people who already know you, trusted you once, and might need you again.',
       theAiOpportunity:
-        'AI can personalize and run reactivation outreach at a scale no human team will — segmenting by recency, service history, and likelihood to convert, then delivering targeted messages across email, SMS, and direct mail.',
+        'AI can personalize and run reactivation outreach at a scale no human team will â€” segmenting by recency, service history, and likelihood to convert, then delivering targeted messages across email, SMS, and direct mail.',
       businessImpact:
         'The cheapest revenue you\'ll ever make. Reactivation campaigns routinely generate 5-15% response rates from "dead" lists.',
       whyOverlooked:
@@ -130,9 +130,9 @@ export const guideContent: GuideContent = {
       title: 'Turning Paper into Data',
       icon: 'document-scan',
       theLeak:
-        'Intake forms, invoices, contracts, records, applications — the unstructured documents your business runs on. Your team retypes them into systems by hand, and it\'s slow and error-prone.',
+        'Intake forms, invoices, contracts, records, applications â€” the unstructured documents your business runs on. Your team retypes them into systems by hand, and it\'s slow and error-prone.',
       theAiOpportunity:
-        'AI extracts, structures, and routes that information automatically — reading handwritten forms, parsing invoices, pulling key terms from contracts, and feeding clean data directly into your systems.',
+        'AI extracts, structures, and routes that information automatically â€” reading handwritten forms, parsing invoices, pulling key terms from contracts, and feeding clean data directly into your systems.',
       businessImpact:
         'Hours of manual data entry eliminated weekly. Fewer errors, faster processing, and staff freed for higher-value work.',
       whyOverlooked:
@@ -145,9 +145,9 @@ export const guideContent: GuideContent = {
       title: 'Capturing Tribal Knowledge',
       icon: 'brain',
       theLeak:
-        'Your most experienced employee carries years of judgment in their head — and one day they retire, quit, or get sick. That knowledge walks out the door with them.',
+        'Your most experienced employee carries years of judgment in their head â€” and one day they retire, quit, or get sick. That knowledge walks out the door with them.',
       theAiOpportunity:
-        'AI can codify how your top performers actually do the work into searchable, trainable systems — capturing decision logic, troubleshooting steps, and institutional knowledge that new hires can access immediately.',
+        'AI can codify how your top performers actually do the work into searchable, trainable systems â€” capturing decision logic, troubleshooting steps, and institutional knowledge that new hires can access immediately.',
       businessImpact:
         'Faster onboarding, consistent service quality, and reduced dependency on any single person. The business becomes more resilient.',
       whyOverlooked:
@@ -160,9 +160,9 @@ export const guideContent: GuideContent = {
       title: 'Triage and Intelligent Routing',
       icon: 'filter',
       theLeak:
-        'Not every inquiry deserves the same attention, but most businesses treat them identically — burning your best people on low-value requests while high-value opportunities wait in the same queue.',
+        'Not every inquiry deserves the same attention, but most businesses treat them identically â€” burning your best people on low-value requests while high-value opportunities wait in the same queue.',
       theAiOpportunity:
-        'AI can qualify, prioritize, and route so humans only touch what actually needs them — scoring leads by value, routing service requests by urgency, and auto-handling routine inquiries.',
+        'AI can qualify, prioritize, and route so humans only touch what actually needs them â€” scoring leads by value, routing service requests by urgency, and auto-handling routine inquiries.',
       businessImpact:
         'Your best people work on your best opportunities. Response time drops for high-value requests. Low-value tasks get handled without human involvement.',
       whyOverlooked:
@@ -175,9 +175,9 @@ export const guideContent: GuideContent = {
       title: 'Plugging Cash-Flow Leaks',
       icon: 'dollar',
       theLeak:
-        'Unbilled work, invoices that went out late, payments that slipped through reconciliation. The revenue was earned — it just never got collected cleanly.',
+        'Unbilled work, invoices that went out late, payments that slipped through reconciliation. The revenue was earned â€” it just never got collected cleanly.',
       theAiOpportunity:
-        'AI can flag the gaps in your billing and AR before they cost you — identifying unbilled time, surfacing overdue invoices, catching reconciliation mismatches, and automating follow-up sequences.',
+        'AI can flag the gaps in your billing and AR before they cost you â€” identifying unbilled time, surfacing overdue invoices, catching reconciliation mismatches, and automating follow-up sequences.',
       businessImpact:
         'Revenue that was already earned gets collected. Cash flow becomes more predictable. Finance stops being a source of silent loss.',
       whyOverlooked:
