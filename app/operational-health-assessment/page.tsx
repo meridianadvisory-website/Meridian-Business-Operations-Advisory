@@ -136,7 +136,6 @@ export default function AssessmentPage() {
   }
 
   const currentQuestions = dimensions[currentDimension]?.questions || []
-  const allAnswered = currentQuestions.every((_, qi) => responses[`${currentDimension}-${qi}`] !== undefined)
   const totalQuestions = 24
   const answeredCount = Object.keys(responses).length
   const progress = Math.round((answeredCount / totalQuestions) * 100)
