@@ -1,4 +1,4 @@
-# Design Document
+﻿# Design Document
 
 ## Overview
 
@@ -9,46 +9,46 @@ This design describes the implementation approach for repositioning the Meridian
 ### System Context
 
 ```
-┌────────────────────────────────────────────────────────────────┐
-│ Next.js App Router (meridianops.com)                           │
-├────────────────────────────────────────────────────────────────┤
-│ app/layout.tsx  ─── metadata, fonts, global styles             │
-│ app/page.tsx    ─── section composition & ordering             │
-├────────────────────────────────────────────────────────────────┤
-│ lib/constants.ts   ─── CALENDLY_URL, SECTION_IDS, flags       │
-│ lib/content.ts     ─── all proof/case-study/FAQ data           │
-├────────────────────────────────────────────────────────────────┤
-│ components/                                                    │
-│   Nav.tsx, Hero.tsx, ProblemSection.tsx, MethodSection.tsx,     │
-│   OfferSection.tsx, WhyMeridian.tsx, ProofSection.tsx,         │
-│   CaseStudies.tsx, FAQ.tsx, CTASection.tsx, Footer.tsx         │
-│   ui/Button.tsx, ui/FadeIn.tsx, ui/SectionLabel.tsx            │
-├────────────────────────────────────────────────────────────────┤
-│ .kiro/steering/meridian-positioning.md  ─── brand guardrails  │
-└────────────────────────────────────────────────────────────────┘
-         │
-         ▼
-┌──────────────────┐
-│ Calendly (ext.)  │  ← All CTAs link here
-└──────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Next.js App Router (meridianadvisor.co)                           â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚ app/layout.tsx  â”€â”€â”€ metadata, fonts, global styles             â”‚
+â”‚ app/page.tsx    â”€â”€â”€ section composition & ordering             â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚ lib/constants.ts   â”€â”€â”€ CALENDLY_URL, SECTION_IDS, flags       â”‚
+â”‚ lib/content.ts     â”€â”€â”€ all proof/case-study/FAQ data           â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚ components/                                                    â”‚
+â”‚   Nav.tsx, Hero.tsx, ProblemSection.tsx, MethodSection.tsx,     â”‚
+â”‚   OfferSection.tsx, WhyMeridian.tsx, ProofSection.tsx,         â”‚
+â”‚   CaseStudies.tsx, FAQ.tsx, CTASection.tsx, Footer.tsx         â”‚
+â”‚   ui/Button.tsx, ui/FadeIn.tsx, ui/SectionLabel.tsx            â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚ .kiro/steering/meridian-positioning.md  â”€â”€â”€ brand guardrails  â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+         â”‚
+         â–¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Calendly (ext.)  â”‚  â† All CTAs link here
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ### Component Strategy
 
 **Preserved components (modified in-place):**
-- `Nav.tsx` — updated link labels, same structure
-- `Hero.tsx` — new copy, CTAs, logo strip; same responsive pattern
-- `ProblemSection.tsx` — new agitation statements; same card grid
-- `WhyMeridian.tsx` — new differentiator copy; same 2-col + cards layout
-- `FAQ.tsx` — new 7 Q&A pairs, convert to accessible accordion (details/summary)
-- `CTASection.tsx` — new heading, subhead, CTA text
-- `Footer.tsx` — updated tagline, links, copyright, privacy link
+- `Nav.tsx` â€” updated link labels, same structure
+- `Hero.tsx` â€” new copy, CTAs, logo strip; same responsive pattern
+- `ProblemSection.tsx` â€” new agitation statements; same card grid
+- `WhyMeridian.tsx` â€” new differentiator copy; same 2-col + cards layout
+- `FAQ.tsx` â€” new 7 Q&A pairs, convert to accessible accordion (details/summary)
+- `CTASection.tsx` â€” new heading, subhead, CTA text
+- `Footer.tsx` â€” updated tagline, links, copyright, privacy link
 
 **New components:**
-- `MethodSection.tsx` — 3-step Map/Build/Operate section
-- `OfferSection.tsx` — AI Value Map offer with pricing, guarantee, secondary cards
-- `ProofSection.tsx` — metrics strip + testimonial slots
-- `CaseStudies.tsx` — 3 cards, feature-flagged
+- `MethodSection.tsx` â€” 3-step Map/Build/Operate section
+- `OfferSection.tsx` â€” AI Value Map offer with pricing, guarantee, secondary cards
+- `ProofSection.tsx` â€” metrics strip + testimonial slots
+- `CaseStudies.tsx` â€” 3 cards, feature-flagged
 
 **Removed components (no longer imported in page.tsx):**
 - `NexusModules.tsx`
@@ -62,9 +62,9 @@ This design describes the implementation approach for repositioning the Meridian
 ### Data Architecture
 
 ```typescript
-// lib/constants.ts — expanded
+// lib/constants.ts â€” expanded
 export const CALENDLY_URL = 'https://calendly.com/meridianops/assessment'
-export const SITE_URL = 'https://meridianops.com'
+export const SITE_URL = 'https://meridianadvisor.co'
 
 export const FEATURE_FLAGS = {
   showCaseStudies: false, // flip to true when real data lands
@@ -83,7 +83,7 @@ export const SECTION_IDS = {
 ```
 
 ```typescript
-// lib/content.ts — centralized editable content
+// lib/content.ts â€” centralized editable content
 export const proofMetrics = [...]
 export const testimonials = [...]
 export const caseStudies = [...]
@@ -134,7 +134,7 @@ import { FEATURE_FLAGS } from '@/lib/constants'
 {FEATURE_FLAGS.showCaseStudies && <CaseStudies />}
 ```
 
-No runtime cost when disabled — the section simply isn't rendered.
+No runtime cost when disabled â€” the section simply isn't rendered.
 
 ### Page Composition (app/page.tsx)
 
@@ -164,13 +164,13 @@ export default function Home() {
 
 ### Property 1: All CTA hrefs resolve to CALENDLY_URL (Req 14)
 
-All anchor elements rendered by CTA buttons across the site SHALL have their `href` attribute equal to the `CALENDLY_URL` constant. This is an invariant — no CTA should point elsewhere.
+All anchor elements rendered by CTA buttons across the site SHALL have their `href` attribute equal to the `CALENDLY_URL` constant. This is an invariant â€” no CTA should point elsewhere.
 
 **Test approach:** Render the full page, query all elements matching `[data-cta-source]` or Button components with variant="primary", and assert each href === CALENDLY_URL.
 
 ### Property 2: Section order invariant (Req 15)
 
-The rendered page SHALL always contain sections in the defined order: Hero → ProblemSection → MethodSection → OfferSection → WhyMeridian → ProofSection → [CaseStudies if flag on] → FAQ → CTASection. The order SHALL NOT vary regardless of content changes.
+The rendered page SHALL always contain sections in the defined order: Hero â†’ ProblemSection â†’ MethodSection â†’ OfferSection â†’ WhyMeridian â†’ ProofSection â†’ [CaseStudies if flag on] â†’ FAQ â†’ CTASection. The order SHALL NOT vary regardless of content changes.
 
 **Test approach:** Query all section elements by their IDs, collect their DOM positions, and assert strictly increasing order.
 
@@ -198,7 +198,7 @@ Each FAQ item SHALL be wrapped in a `<details>` element with a `<summary>` child
 
 **Test approach:** Render FAQ, query `details` elements, assert count === 7, verify each has a `summary` first-child.
 
-### Property 7: Accessible contrast — no teal text on dark without AA compliance (Req 13)
+### Property 7: Accessible contrast â€” no teal text on dark without AA compliance (Req 13)
 
 All text elements using teal color SHALL use `--teal` (#00D4B4) which passes 4.5:1 on the navy background. The brand teal #4DB8A0 SHALL NOT appear as a text color in any component.
 
@@ -230,8 +230,8 @@ All text elements using teal color SHALL use `--teal` (#00D4B4) which passes 4.5
 ## Dependencies
 
 No new npm dependencies required. The implementation uses:
-- `framer-motion` (existing) — animations
-- `lucide-react` (existing) — icons
-- `next` (existing) — framework, metadata, fonts
-- Native `<details>/<summary>` — accordion (no library needed)
+- `framer-motion` (existing) â€” animations
+- `lucide-react` (existing) â€” icons
+- `next` (existing) â€” framework, metadata, fonts
+- Native `<details>/<summary>` â€” accordion (no library needed)
 - Plausible analytics script (already in layout.tsx, commented out)

@@ -18,18 +18,18 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://meridianops.com'),
+  metadataBase: new URL('https://meridianadvisor.co'),
   title: 'Meridian | Business Operations Advisory',
   description:
     "Meridian helps growing service businesses eliminate operational bottlenecks, streamline workflows, and strategically implement practical AI. Business First. AI Enabled.",
   alternates: {
-    canonical: 'https://meridianops.com',
+    canonical: 'https://meridianadvisor.co',
   },
   openGraph: {
     title: 'Meridian | Business Operations Advisory',
     description:
       "Meridian helps growing service businesses eliminate operational bottlenecks and build organizations that scale. Business First. AI Enabled.",
-    url: 'https://meridianops.com',
+    url: 'https://meridianadvisor.co',
     type: 'website',
     images: [
       {
@@ -115,7 +115,7 @@ export default function RootLayout({
         </div>
 
         {children}
-        <Script defer data-domain="meridianops.com" src="https://plausible.io/js/script.js" strategy="afterInteractive" />
+        <Script defer data-domain="meridianadvisor.co" src="https://plausible.io/js/script.js" strategy="afterInteractive" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -184,8 +184,8 @@ export default function RootLayout({
               "name": "Meridian Solutions",
               "legalName": "Meridian Solutions, LLC",
               "description": "Operations consulting for professional service firms. We find where your hours go, price them, and fix the expensive ones. No new headcount.",
-              "url": "https://meridianops.com",
-              "logo": "https://meridianops.com/og-image.png",
+              "url": "https://meridianadvisor.co",
+              "logo": "https://meridianadvisor.co/og-image.png",
               "telephone": "",
               "address": {
                 "@type": "PostalAddress",

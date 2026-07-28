@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
 
     const resend = new Resend(apiKey)
     const fromAddress = process.env.EMAIL_FROM || 'Meridian <onboarding@resend.dev>'
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://meridianops.com'
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://meridianadvisor.co'
 
     // Add to Resend Audience
     const audienceId = process.env.RESEND_AUDIENCE_ID
@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
 <tr><td align="center" style="padding:2.5rem 1rem;">
 <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
 <tr><td style="padding-bottom:24px;">
-  <img src="https://meridianops.com/assets/meridian-logo-full.svg" alt="Meridian Business Operations Advisory" width="220" style="display:block;height:auto;" />
+  <img src="https://meridianadvisor.co/assets/meridian-logo-full.svg" alt="Meridian Business Operations Advisory" width="220" style="display:block;height:auto;" />
 </td></tr>
 <tr><td style="padding-bottom:16px;">
   <p style="color:#102A43;font-size:1.1rem;font-weight:700;margin:0;">Hi ${firstName},</p>
@@ -70,7 +70,7 @@ export async function POST(request: NextRequest) {
 </td></tr>
 <tr><td style="border-top:1px solid #E5E7EB;padding-top:20px;">
   <p style="color:#94A3B8;font-size:0.7rem;margin:0;">Meridian Business Operations Advisory &middot; Business First. AI Enabled.</p>
-  <p style="color:#94A3B8;font-size:0.7rem;margin:4px 0 0;"><a href="${siteUrl}" style="color:#94A3B8;">meridianops.com</a></p>
+  <p style="color:#94A3B8;font-size:0.7rem;margin:4px 0 0;"><a href="${siteUrl}" style="color:#94A3B8;">meridianadvisor.co</a></p>
 </td></tr>
 </table>
 </td></tr>

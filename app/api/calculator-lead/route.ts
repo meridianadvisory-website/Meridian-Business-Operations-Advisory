@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
 
 <!-- HEADER -->
 <tr><td style="background-color:#0C3D5C;padding:1.5rem 2rem;border-radius:8px 8px 0 0;">
-  <img src="https://meridianops.com/logo-new.png" alt="Meridian Solutions" width="140" style="display:block;height:auto;margin-bottom:0.5rem;" />
+  <img src="https://meridianadvisor.co/logo-new.png" alt="Meridian Solutions" width="140" style="display:block;height:auto;margin-bottom:0.5rem;" />
   <p style="margin:0;color:rgba(255,255,255,0.7);font-size:0.75rem;">Operational Efficiency Analysis</p>
 </td></tr>
 

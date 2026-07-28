@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server'
+﻿import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { SITE_URL, LEAD_MAGNET_URL, CALENDLY_URL } from '@/lib/constants'
 
@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
 
     // Send the lead magnet email
     const { error } = await resend.emails.send({
-      from: process.env.EMAIL_FROM || 'Meridian Solutions <hello@meridianops.com>',
+      from: process.env.EMAIL_FROM || 'Meridian Solutions <hello@meridianadvisor.co>',
       to: email,
       subject: 'Your guide: The 7 Operational Costs Firms Overlook',
       html: `
@@ -70,22 +70,22 @@ export async function POST(request: NextRequest) {
                   <tr>
                     <td style="padding-bottom: 12px;">
                       <p style="color: #B0BACA; line-height: 1.7; font-size: 0.9rem; margin: 0;">
-                        Inside you'll find the 7 hidden cost areas we see professional service firms overlook — and what to do about each one.
+                        Inside you'll find the 7 hidden cost areas we see professional service firms overlook â€” and what to do about each one.
                       </p>
                     </td>
                   </tr>
                   <tr>
                     <td style="padding-bottom: 24px;">
                       <p style="color: #B0BACA; line-height: 1.7; font-size: 0.9rem; margin: 0;">
-                        When you're ready to find your specific opportunities, <a href="${CALENDLY_URL}" style="color: #00D4B4; text-decoration: underline;">book a 20-minute call</a> — eight questions, no system access, no pitch.
+                        When you're ready to find your specific opportunities, <a href="${CALENDLY_URL}" style="color: #00D4B4; text-decoration: underline;">book a 20-minute call</a> â€” eight questions, no system access, no pitch.
                       </p>
                     </td>
                   </tr>
                   <tr>
                     <td style="border-top: 1px solid #1F2933; padding-top: 24px;">
                       <p style="color: #8A97AB; font-size: 0.75rem; margin: 0;">
-                        Meridian Solutions, LLC — Operations consulting for professional service firms.<br/>
-                        <a href="${SITE_URL}" style="color: #8A97AB;">meridianops.com</a>
+                        Meridian Solutions, LLC â€” Operations consulting for professional service firms.<br/>
+                        <a href="${SITE_URL}" style="color: #8A97AB;">meridianadvisor.co</a>
                       </p>
                     </td>
                   </tr>

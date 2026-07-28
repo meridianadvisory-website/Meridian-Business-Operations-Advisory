@@ -1,12 +1,12 @@
-# Requirements Document
+﻿# Requirements Document
 
 ## Introduction
 
-Reposition the Meridian Solutions website from an operations-intelligence SaaS platform (NEXUS) to an AI transformation and operations consultancy for established SMBs. The site will communicate a new value proposition — helping owner-operated businesses (10–100 employees, $2M–$50M revenue) find where AI pays for itself before spending a dollar building it. All existing copy and sections will be replaced with new content reflecting the consultancy model, the Map / Build / Operate method, and the AI Value Map flagship offer.
+Reposition the Meridian Solutions website from an operations-intelligence SaaS platform (NEXUS) to an AI transformation and operations consultancy for established SMBs. The site will communicate a new value proposition â€” helping owner-operated businesses (10â€“100 employees, $2Mâ€“$50M revenue) find where AI pays for itself before spending a dollar building it. All existing copy and sections will be replaced with new content reflecting the consultancy model, the Map / Build / Operate method, and the AI Value Map flagship offer.
 
 ## Glossary
 
-- **Site**: The Next.js App Router website at meridianops.com
+- **Site**: The Next.js App Router website at meridianadvisor.co
 - **Steering_File**: A markdown document at `.kiro/steering/meridian-positioning.md` containing brand voice, color, and positioning guardrails for all future edits
 - **Hero_Section**: The above-the-fold landing area containing headline, subhead, CTAs, and social proof strip
 - **Problem_Section**: A content block below the hero that uses bold agitation statements to articulate the visitor's pain
@@ -20,9 +20,9 @@ Reposition the Meridian Solutions website from an operations-intelligence SaaS p
 - **Nav_Component**: The fixed navigation bar with links and primary CTA button
 - **Footer_Component**: The site footer with links, tagline, and copyright
 - **Booking_Flow**: The external scheduler (Calendly) or embedded form that all CTAs route to
-- **ICP**: Ideal Customer Profile — owner-operated SMBs, 10–100 employees, $2M–$50M revenue, in home services, healthcare, legal, financial services, real estate
+- **ICP**: Ideal Customer Profile â€” owner-operated SMBs, 10â€“100 employees, $2Mâ€“$50M revenue, in home services, healthcare, legal, financial services, real estate
 - **Brand_Colors**: Navy #0C3D5C, Teal #4DB8A0 as primary palette
-- **Guarantee_Terms**: The written terms defining what "3x value or you don't pay" means — including measurement method, evaluation window, and refund/credit mechanics
+- **Guarantee_Terms**: The written terms defining what "3x value or you don't pay" means â€” including measurement method, evaluation window, and refund/credit mechanics
 - **Feature_Flag**: A configuration-level toggle that controls whether a section renders on the live site
 - **Conversion_Event**: A client-side analytics event fired when a visitor clicks a booking CTA
 
@@ -195,13 +195,13 @@ Reposition the Meridian Solutions website from an operations-intelligence SaaS p
 
 ### Requirement 16: Responsive Layout and Mobile Behavior
 
-**User Story:** As a mobile visitor (375px–768px viewport), I want the site to render correctly with readable text and usable interactions, so that I can evaluate and engage with Meridian on my phone.
+**User Story:** As a mobile visitor (375pxâ€“768px viewport), I want the site to render correctly with readable text and usable interactions, so that I can evaluate and engage with Meridian on my phone.
 
 #### Acceptance Criteria
 
 1. THE Site SHALL render all sections without horizontal overflow or overlapping elements at 375px viewport width
 2. THE Site SHALL stack card grids (Offer cards, Case Study cards, Method steps) into a single column at viewports below 768px
-3. THE Site SHALL maintain minimum tap target size of 44×44px for all interactive elements on mobile
+3. THE Site SHALL maintain minimum tap target size of 44Ã—44px for all interactive elements on mobile
 4. THE Site SHALL ensure the FAQ accordion is fully operable via touch on mobile viewports
 5. WHEN the viewport is below 768px, THE Nav_Component SHALL collapse into a hamburger menu (preserving existing mobile nav behavior)
 

@@ -1,13 +1,13 @@
-# Deployment Guide — Meridian Business Operations Advisory
+﻿# Deployment Guide â€” Meridian Business Operations Advisory
 
 ## Cost Summary
 
 | Service | Cost | Purpose |
 |---------|------|---------|
 | Vercel (hosting) | Free | Hosts the Next.js site |
-| Namecheap (domain) | ~$12/yr | `meridianops.com` |
+| Namecheap (domain) | ~$12/yr | `meridianadvisor.co` |
 | Resend (email sending) | Free tier (100/day) | Sends briefing downloads, contact confirmations, notifications |
-| Google Workspace (business email) | $7/mo | `kevin@meridianops.com` inbox |
+| Google Workspace (business email) | $7/mo | `kevin@meridianadvisor.co` inbox |
 
 **Total: ~$96/yr to start**
 
@@ -16,9 +16,9 @@
 ## Step 1: Buy the Domain
 
 1. Go to [namecheap.com](https://namecheap.com)
-2. Search for `meridianops.com`
+2. Search for `meridianadvisor.co`
 3. Purchase (~$12/yr for .com)
-4. After purchase: Domain List → click domain → **Advanced DNS** tab
+4. After purchase: Domain List â†’ click domain â†’ **Advanced DNS** tab
 
 ---
 
@@ -38,10 +38,10 @@ If remote already exists: `git push origin main`
 
 ## Step 3: Deploy on Vercel
 
-1. Go to [vercel.com](https://vercel.com) → Sign up with GitHub
-2. Click **"Add New" → Project**
+1. Go to [vercel.com](https://vercel.com) â†’ Sign up with GitHub
+2. Click **"Add New" â†’ Project**
 3. Import `meridian-website` from GitHub
-4. Vercel auto-detects Next.js — accept defaults
+4. Vercel auto-detects Next.js â€” accept defaults
 5. **Before deploying**, add environment variables:
 
 | Key | Value |
@@ -49,7 +49,7 @@ If remote already exists: `git push origin main`
 | `RESEND_API_KEY` | Your Resend API key (get in Step 5) |
 | `EMAIL_FROM` | `Meridian <onboarding@resend.dev>` (temporary) |
 | `RESEND_AUDIENCE_ID` | Your audience ID from Resend |
-| `NEXT_PUBLIC_SITE_URL` | `https://meridianops.com` |
+| `NEXT_PUBLIC_SITE_URL` | `https://meridianadvisor.co` |
 
 6. Click **Deploy** (~60 seconds)
 7. Test at your Vercel URL (e.g., `meridian-website.vercel.app`)
@@ -58,9 +58,9 @@ If remote already exists: `git push origin main`
 
 ## Step 4: Connect Custom Domain
 
-1. Vercel → Project → **Settings → Domains**
-2. Add `meridianops.com` and `www.meridianops.com`
-3. Go to Namecheap → Advanced DNS, add:
+1. Vercel â†’ Project â†’ **Settings â†’ Domains**
+2. Add `meridianadvisor.co` and `www.meridianadvisor.co`
+3. Go to Namecheap â†’ Advanced DNS, add:
 
 | Type | Host | Value |
 |------|------|-------|
@@ -68,7 +68,7 @@ If remote already exists: `git push origin main`
 | CNAME | www | `cname.vercel-dns.com` |
 
 4. Delete any default "parking" records
-5. Wait 5–30 min for DNS propagation
+5. Wait 5â€“30 min for DNS propagation
 6. Vercel auto-provisions SSL (HTTPS)
 
 ---
@@ -77,13 +77,13 @@ If remote already exists: `git push origin main`
 
 Resend powers: Executive Briefing delivery, contact form confirmations, and lead notifications.
 
-1. Go to [resend.com](https://resend.com) → Sign up
-2. Dashboard → **API Keys** → Create key → Copy it
+1. Go to [resend.com](https://resend.com) â†’ Sign up
+2. Dashboard â†’ **API Keys** â†’ Create key â†’ Copy it
 3. Paste into Vercel env vars as `RESEND_API_KEY`
-4. Dashboard → **Audiences** → Create audience → Copy the ID
+4. Dashboard â†’ **Audiences** â†’ Create audience â†’ Copy the ID
 5. Paste into Vercel as `RESEND_AUDIENCE_ID`
 6. **Verify your sending domain:**
-   - Resend → **Domains** → Add `meridianops.com`
+   - Resend â†’ **Domains** â†’ Add `meridianadvisor.co`
    - Add the DNS records Resend provides:
 
 | Type | Host | Value |
@@ -92,8 +92,8 @@ Resend powers: Executive Briefing delivery, contact form confirmations, and lead
 | TXT | @ | SPF record (Resend provides) |
 | CNAME | `resend._domainkey` | DKIM (Resend provides) |
 
-7. Wait for verification (5–15 min)
-8. Update Vercel env var: `EMAIL_FROM` → `Meridian <hello@meridianops.com>`
+7. Wait for verification (5â€“15 min)
+8. Update Vercel env var: `EMAIL_FROM` â†’ `Meridian <hello@meridianadvisor.co>`
 9. Redeploy
 
 ---
@@ -102,10 +102,10 @@ Resend powers: Executive Briefing delivery, contact form confirmations, and lead
 
 Resend only **sends**. You need an inbox to **receive** replies.
 
-### Google Workspace ($7/mo) — Recommended
+### Google Workspace ($7/mo) â€” Recommended
 
 1. Go to [workspace.google.com](https://workspace.google.com)
-2. Use domain `meridianops.com`
+2. Use domain `meridianadvisor.co`
 3. Add MX records to Namecheap:
 
 | Type | Host | Priority | Value |
@@ -117,15 +117,15 @@ Resend only **sends**. You need an inbox to **receive** replies.
 | MX | @ | 10 | `ALT4.ASPMX.L.GOOGLE.COM` |
 
 4. Verify domain ownership
-5. Create `kevin@meridianops.com`
+5. Create `kevin@meridianadvisor.co`
 6. You now receive email via Gmail
 
 ---
 
 ## Step 7: Set Up Calendly
 
-1. Go to [calendly.com](https://calendly.com) → Sign up
-2. Create event: "Executive Introduction — 15 min"
+1. Go to [calendly.com](https://calendly.com) â†’ Sign up
+2. Create event: "Executive Introduction â€” 15 min"
 3. Upload logo (`public/assets/meridian-logo-calendly.svg` converted to PNG)
 4. Set availability
 5. Your current URL is already configured: `calendly.com/meridian_assessment/15min`
@@ -155,17 +155,17 @@ v=spf1 include:_spf.google.com include:send.resend.com ~all
 
 ## Step 9: Post-Launch Verification
 
-- [ ] `meridianops.com` loads with HTTPS
-- [ ] `www.meridianops.com` redirects to `meridianops.com`
+- [ ] `meridianadvisor.co` loads with HTTPS
+- [ ] `www.meridianadvisor.co` redirects to `meridianadvisor.co`
 - [ ] Homepage renders correctly (nav, sections, CTAs)
 - [ ] "Schedule Introduction" buttons open Calendly
-- [ ] Executive Briefing form submits → email arrives → download works
-- [ ] Operational Health Scorecard completes → results display
-- [ ] Contact form submits → you receive notification email
+- [ ] Executive Briefing form submits â†’ email arrives â†’ download works
+- [ ] Operational Health Scorecard completes â†’ results display
+- [ ] Contact form submits â†’ you receive notification email
 - [ ] Prospect receives confirmation email
 - [ ] Logo displays correctly in nav, footer, and sub-pages
 - [ ] Favicon shows Meridian mark in browser tab
-- [ ] Mobile responsive — test at 375px width
+- [ ] Mobile responsive â€” test at 375px width
 - [ ] OG image shows correctly when sharing on LinkedIn
 
 ---
@@ -174,7 +174,7 @@ v=spf1 include:_spf.google.com include:send.resend.com ~all
 
 | URL | Purpose |
 |-----|---------|
-| `/` | Homepage — full advisory positioning |
+| `/` | Homepage â€” full advisory positioning |
 | `/executive-overview` | Executive Briefing gated download |
 | `/operational-health-assessment` | Operational Health Scorecard (24 questions) |
 | `/contact` | Contact form |
@@ -218,7 +218,7 @@ v=spf1 include:_spf.google.com include:send.resend.com ~all
 
 **Emails not sending:**
 - Verify `RESEND_API_KEY` in Vercel env vars
-- Check Resend dashboard → Logs
+- Check Resend dashboard â†’ Logs
 - Until domain verified, emails only deliver to your Resend account email
 
 **Briefing not downloading:**
@@ -226,7 +226,7 @@ v=spf1 include:_spf.google.com include:send.resend.com ~all
 - Check the file is committed to git
 
 **Domain not connecting:**
-- DNS propagation takes up to 48 hours (usually 5–30 min)
+- DNS propagation takes up to 48 hours (usually 5â€“30 min)
 - Delete conflicting records
 - Use [dnschecker.org](https://dnschecker.org) to check
 
