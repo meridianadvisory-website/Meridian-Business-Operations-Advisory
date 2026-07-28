@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="80" viewBox="0 0 400 80" fill="none">
+  <!-- Mark -->
+  <line x1="12" y1="60" x2="12" y2="44" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
+  <line x1="24" y1="60" x2="24" y2="36" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
+  <line x1="36" y1="60" x2="36" y2="26" stroke="#866118" stroke-width="6" stroke-linecap="round"/>
+  <line x1="48" y1="60" x2="48" y2="18" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
+  <line x1="60" y1="60" x2="60" y2="10" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
+  <!-- Wordmark -->
+  <text x="82" y="52" font-family="Manrope, -apple-system, sans-serif" font-size="32" font-weight="800" letter-spacing="-0.5" fill="#102A43">MERIDIAN</text>
+  <!-- Subtitle -->
+  <text x="83" y="68" font-family="Inter, -apple-system, sans-serif" font-size="9" letter-spacing="1.5" fill="#64748B">BUSINESS OPERATIONS ADVISORY</text>
+</svg>

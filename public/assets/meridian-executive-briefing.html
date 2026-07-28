@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridian Executive Briefing</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+    :root {
+      --navy: #102A43;
+      --ivory: #FAFAF8;
+      --charcoal: #2D3748;
+      --slate: #64748B;
+      --gold: #866118;
+      --lightgray: #F5F7FA;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--charcoal);
+      line-height: 1.7;
+      font-size: 15px;
+      background: white;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 3rem;
+      page-break-after: always;
+    }
+    .page:last-child { page-break-after: avoid; }
+
+    h1, h2, h3 {
+      font-family: 'Manrope', sans-serif;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+    h1 { font-size: 2.2rem; font-weight: 800; line-height: 1.1; }
+    h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; }
+    h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    p { margin-bottom: 1rem; color: var(--slate); }
+    .text-navy { color: var(--navy); }
+    .text-gold { color: var(--gold); }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin: 1.5rem 0;
+    }
+
+    .cover {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 80vh;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 3rem;
+    }
+
+    .logo-text { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 15px; color: var(--navy); letter-spacing: -0.02em; }
+    .logo-sub { font-size: 9px; letter-spacing: 0.15em; color: var(--slate); text-transform: uppercase; }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      border: 1px solid #E5E7EB;
+      border-radius: 8px;
+      padding: 1.25rem;
+      text-align: center;
+      background: var(--lightgray);
+    }
+    .stat-card .number { font-family: 'Manrope', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--navy); }
+    .stat-card .label { font-size: 0.75rem; color: var(--slate); margin-top: 0.25rem; }
+
+    .philosophy-block {
+      background: var(--navy);
+      color: var(--ivory);
+      padding: 2.5rem;
+      border-radius: 8px;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .philosophy-block h2 { color: var(--ivory); margin-bottom: 0.5rem; }
+    .philosophy-block p { color: var(--slate); }
+
+    .framework-step {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid #E5E7EB;
+    }
+    .framework-step:last-child { border-bottom: none; }
+    .step-letter { font-family: 'Manrope', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--gold); width: 32px; flex-shrink: 0; }
+    .step-content h3 { font-size: 0.9rem; margin-bottom: 0.25rem; }
+    .step-content p { font-size: 0.8rem; margin-bottom: 0; }
+
+    .timeline { margin: 2rem 0; }
+    .timeline-step {
+      position: relative;
+      padding-left: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-left: 2px solid #E5E7EB;
+    }
+    .timeline-step:last-child { border-left: none; padding-bottom: 0; }
+    .timeline-step::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    .timeline-step h3 { font-size: 0.85rem; margin-bottom: 0.25rem; }
+    .timeline-step p { font-size: 0.8rem; margin-bottom: 0; }
+
+    .outcomes-list { list-style: none; padding: 0; }
+    .outcomes-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #F3F4F6;
+      font-size: 0.85rem;
+      color: var(--charcoal);
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+    .outcomes-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 0.4rem;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      border: 2px solid var(--navy);
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+    .cta-section h2 { margin-bottom: 0.75rem; }
+    .cta-section p { max-width: 480px; margin: 0 auto 1rem; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--ivory);
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .letter { font-style: italic; border-left: 3px solid var(--gold); padding-left: 1.5rem; margin: 2rem 0; }
+    .letter p { font-size: 0.9rem; line-height: 1.8; }
+
+    @media print {
+      body { font-size: 13px; }
+      .page { padding: 2rem; max-width: 100%; }
+      .cover { min-height: auto; padding: 3rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- COVER -->
+  <div class="page cover">
+    <div class="logo-mark">
+      <svg width="38" height="32" viewBox="0 0 38 36" fill="none">
+        <line x1="5" y1="30" x2="5" y2="22" stroke="#102A43" stroke-width="2.5" stroke-linecap="round" />
+        <line x1="12" y1="30" x2="12" y2="18" stroke="#102A43" stroke-width="2.5" stroke-linecap="round" />
+        <line x1="19" y1="30" x2="19" y2="12" stroke="#866118" stroke-width="3" stroke-linecap="round" />
+        <line x1="26" y1="30" x2="26" y2="8" stroke="#102A43" stroke-width="2.5" stroke-linecap="round" />
+        <line x1="33" y1="30" x2="33" y2="4" stroke="#102A43" stroke-width="2.5" stroke-linecap="round" />
+      </svg>
+      <div>
+        <div class="logo-text">MERIDIAN</div>
+        <div class="logo-sub">Business Operations Advisory</div>
+      </div>
+    </div>
+
+    <div class="eyebrow">Executive Briefing</div>
+    <h1>Helping Growing Service Businesses Improve Operations Before Implementing Technology</h1>
+    <p style="margin-top: 2rem; color: var(--gold); font-weight: 600;">Business First. AI Enabled.</p>
+  </div>
+
+  <!-- EXECUTIVE LETTER -->
+  <div class="page">
+    <div class="eyebrow">A Note from Our Founder</div>
+    <h2>Why Meridian Exists</h2>
+
+    <div class="letter">
+      <p>Most businesses that come to us don't have an AI problem. They have an operational visibility problem.</p>
+      <p>They've grown faster than their processes. What worked at 20 employees doesn't work at 80. The people are talented. The systems aren't keeping up. And the instinct is to buy more technology.</p>
+      <p>But technology doesn't solve problems it can't see. You have to understand how the business actually operates before you can improve it. That's what Meridian does.</p>
+      <p>We diagnose first. We recommend second. And when AI is the right answer, we implement it on a foundation that can sustain it.</p>
+      <p>If your business is growing but feeling harder to run, I'd welcome the conversation.</p>
+      <p style="color: var(--navy); font-style: normal; font-weight: 600; margin-top: 1.5rem;">Kevin Barnett<br><span style="font-weight: 400; font-size: 0.85rem; color: var(--slate);">Founder, Meridian Business Operations Advisory</span></p>
+    </div>
+  </div>
+
+  <!-- WHY BUSINESSES STRUGGLE -->
+  <div class="page">
+    <div class="eyebrow">The Challenge</div>
+    <h2>Why Businesses Struggle to Scale</h2>
+
+    <p>Growth exposes operational weaknesses that were manageable at a smaller size. As revenue, headcount, and client volume increase, the same patterns emerge:</p>
+
+    <ul class="outcomes-list">
+      <li>Processes live in people's heads rather than documented systems</li>
+      <li>Manual work absorbs capacity that should go to revenue-generating activity</li>
+      <li>Leadership lacks real-time visibility into what's actually happening</li>
+      <li>Teams operate inconsistently across locations, departments, or shifts</li>
+      <li>Technology systems are disconnected and underutilized</li>
+      <li>Reporting is reactive rather than predictive</li>
+      <li>AI investments are made without operational strategy</li>
+    </ul>
+
+    <p class="text-navy" style="font-weight: 600; margin-top: 1.5rem;">These are not technology problems. They are business problems.</p>
+  </div>
+
+  <!-- HIDDEN COST -->
+  <div class="page">
+    <div class="eyebrow">The Impact</div>
+    <h2>The Hidden Cost of Operational Friction</h2>
+
+    <p>Operational friction doesn't appear on a balance sheet. But it compounds across every function:</p>
+
+    <div class="stat-grid">
+      <div class="stat-card"><div class="number">Revenue</div><div class="label">Missed opportunities from slow response and inconsistent delivery</div></div>
+      <div class="stat-card"><div class="number">Profitability</div><div class="label">Margin erosion from rework, waste, and administrative overhead</div></div>
+      <div class="stat-card"><div class="number">Growth</div><div class="label">Inability to scale without proportional headcount increases</div></div>
+      <div class="stat-card"><div class="number">Risk</div><div class="label">Knowledge concentration, compliance gaps, and process fragility</div></div>
+    </div>
+
+    <p>Most leaders feel the friction. Few can quantify it. That's where Meridian starts.</p>
+  </div>
+
+  <!-- PHILOSOPHY -->
+  <div class="page">
+    <div class="philosophy-block">
+      <div class="eyebrow" style="color: var(--gold);">Our Philosophy</div>
+      <h2>Business First.<br>Operations Second.<br>Technology Third.<br>AI Last.</h2>
+      <p style="margin-top: 1rem;">Meridian never recommends technology before understanding the business. We improve how work gets done before introducing tools that automate it.</p>
+    </div>
+
+    <p style="margin-top: 2rem;">This sequence matters because:</p>
+    <ul class="outcomes-list">
+      <li>Automating a broken process makes it fail faster</li>
+      <li>AI trained on inconsistent data produces inconsistent results</li>
+      <li>Technology adoption fails without clear operational context</li>
+      <li>ROI is impossible to measure without a baseline</li>
+    </ul>
+  </div>
+
+  <!-- ALIGN FRAMEWORK -->
+  <div class="page">
+    <div class="eyebrow">Our Methodology</div>
+    <h2>The Meridian ALIGN&trade; Framework</h2>
+    <p>A structured approach to understanding how your business operates and where improvement creates the greatest value.</p>
+
+    <div style="margin-top: 2rem;">
+      <div class="framework-step">
+        <div class="step-letter">A</div>
+        <div class="step-content">
+          <h3>Assess</h3>
+          <p>Understand how the business operates today. Map workflows, interview teams, identify friction points.</p>
+        </div>
+      </div>
+      <div class="framework-step">
+        <div class="step-letter">L</div>
+        <div class="step-content">
+          <h3>Locate</h3>
+          <p>Identify bottlenecks, risks, waste, and high-value opportunities. Size each one in business terms.</p>
+        </div>
+      </div>
+      <div class="framework-step">
+        <div class="step-letter">I</div>
+        <div class="step-content">
+          <h3>Improve</h3>
+          <p>Redesign workflows for efficiency and scalability. Process first, technology second.</p>
+        </div>
+      </div>
+      <div class="framework-step">
+        <div class="step-letter">G</div>
+        <div class="step-content">
+          <h3>Guide</h3>
+          <p>Support implementation, ownership, and organizational adoption.</p>
+        </div>
+      </div>
+      <div class="framework-step">
+        <div class="step-letter">N</div>
+        <div class="step-content">
+          <h3>Navigate</h3>
+          <p>Measure performance, adjust priorities, and continue improving over time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT WE EVALUATE -->
+  <div class="page">
+    <div class="eyebrow">Our Lens</div>
+    <h2>What We Evaluate</h2>
+    <p>Meridian examines business operations holistically, not through a technology-first lens:</p>
+
+    <div class="stat-grid">
+      <div class="stat-card"><div class="number" style="font-size: 1rem;">People</div><div class="label">Roles, capacity, knowledge, and readiness for change</div></div>
+      <div class="stat-card"><div class="number" style="font-size: 1rem;">Processes</div><div class="label">Workflows, handoffs, consistency, and efficiency</div></div>
+      <div class="stat-card"><div class="number" style="font-size: 1rem;">Technology</div><div class="label">Utilization, integration, gaps, and redundancy</div></div>
+      <div class="stat-card"><div class="number" style="font-size: 1rem;">Data</div><div class="label">Accessibility, accuracy, timeliness, and decision support</div></div>
+      <div class="stat-card"><div class="number" style="font-size: 1rem;">Customer Experience</div><div class="label">Consistency, responsiveness, and service delivery</div></div>
+      <div class="stat-card"><div class="number" style="font-size: 1rem;">Governance</div><div class="label">Ownership, accountability, measurement, and reporting</div></div>
+    </div>
+  </div>
+
+  <!-- WHAT CLIENTS GAIN -->
+  <div class="page">
+    <div class="eyebrow">Outcomes</div>
+    <h2>What Better Operations Make Possible</h2>
+
+    <ul class="outcomes-list">
+      <li>Greater operational visibility for leadership</li>
+      <li>Streamlined workflows with fewer handoffs and delays</li>
+      <li>Faster execution across the organization</li>
+      <li>Reduced manual and administrative work</li>
+      <li>Better decision-making with timely, reliable data</li>
+      <li>Practical AI adoption where it creates measurable value</li>
+      <li>Scalable operating systems that grow with the business</li>
+      <li>Leadership confidence and freed capacity for strategic work</li>
+    </ul>
+
+    <p class="text-navy" style="font-weight: 600; margin-top: 1.5rem;">The goal is not perfection. It is measurable progress in the areas that matter most.</p>
+  </div>
+
+  <!-- ENGAGEMENT PROCESS -->
+  <div class="page">
+    <div class="eyebrow">How We Work</div>
+    <h2>Our Engagement Process</h2>
+
+    <div class="timeline">
+      <div class="timeline-step">
+        <h3>Executive Introduction</h3>
+        <p>Complimentary. Determine mutual fit and discuss your operational priorities.</p>
+      </div>
+      <div class="timeline-step">
+        <h3>Executive Operations Discovery</h3>
+        <p>Paid. Understand the business at a deeper level through focused leadership conversations.</p>
+      </div>
+      <div class="timeline-step">
+        <h3>Meridian ALIGN&trade; Business Operations Assessment</h3>
+        <p>Comprehensive executive diagnostic. Process mapping, opportunity scoring, financial sizing.</p>
+      </div>
+      <div class="timeline-step">
+        <h3>Executive Roadmap Presentation</h3>
+        <p>Review findings, priorities, and recommended actions with leadership.</p>
+      </div>
+      <div class="timeline-step">
+        <h3>Implementation &amp; Advisory</h3>
+        <p>Execute improvements and provide ongoing strategic guidance.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHO WE WORK WITH -->
+  <div class="page">
+    <div class="eyebrow">Ideal Fit</div>
+    <h2>Who We Work Best With</h2>
+
+    <p>Meridian serves growing service businesses that are operationally stretched and ready to improve. Our best clients share these characteristics:</p>
+
+    <ul class="outcomes-list">
+      <li>Annual revenue of approximately $1M&ndash;$25M</li>
+      <li>Experiencing growth that outpaces current operational systems</li>
+      <li>Leadership team open to examining how work gets done</li>
+      <li>Multiple departments, locations, or functional areas</li>
+      <li>Limited internal operations strategy or AI roadmap</li>
+      <li>Ready to invest in professional advisory guidance</li>
+    </ul>
+
+    <h3 style="margin-top: 2rem;">Industries We Serve</h3>
+    <p>Professional Services &bull; Healthcare Practices &bull; Legal &bull; Accounting &bull; Construction &bull; Trades &bull; Property Management &bull; Business Services</p>
+  </div>
+
+  <!-- WHY MERIDIAN -->
+  <div class="page">
+    <div class="eyebrow">Why Meridian</div>
+    <h2>Why Leadership Teams Choose Meridian</h2>
+
+    <ul class="outcomes-list">
+      <li>Business-first approach &mdash; operations improve before technology enters the conversation</li>
+      <li>Structured ALIGN&trade; methodology with measurable outcomes</li>
+      <li>Vendor-neutral recommendations &mdash; no platform partnerships</li>
+      <li>Enterprise operational experience applied to growing businesses</li>
+      <li>Practical AI strategy &mdash; applied only where it creates value</li>
+      <li>Executive-ready deliverables built for leadership decision-making</li>
+      <li>Long-term advisory relationship, not a one-time project</li>
+    </ul>
+  </div>
+
+  <!-- CTA -->
+  <div class="page">
+    <div class="cta-section">
+      <div class="eyebrow">Next Step</div>
+      <h2>Schedule a Complimentary Executive Introduction</h2>
+      <p>Discuss your business goals. Understand your operational challenges. Determine whether Meridian is the right advisory partner.</p>
+      <p style="font-size: 0.8rem; color: var(--slate);">No consulting. No sales pressure. Simply a conversation to determine mutual fit.</p>
+      <a href="https://calendly.com/meridian_assessment/15min" class="cta-btn">Schedule Your Introduction</a>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <div class="logo-mark" style="justify-content: center;">
+        <svg width="28" height="24" viewBox="0 0 38 36" fill="none">
+          <line x1="5" y1="30" x2="5" y2="22" stroke="#102A43" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="12" y1="30" x2="12" y2="18" stroke="#102A43" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="19" y1="30" x2="19" y2="12" stroke="#866118" stroke-width="3" stroke-linecap="round" />
+          <line x1="26" y1="30" x2="26" y2="8" stroke="#102A43" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="33" y1="30" x2="33" y2="4" stroke="#102A43" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+        <div>
+          <div class="logo-text" style="font-size: 12px;">MERIDIAN</div>
+          <div class="logo-sub">Business Operations Advisory</div>
+        </div>
+      </div>
+      <p style="font-size: 0.75rem; color: var(--slate); margin-top: 1rem;">
+        <a href="https://meridianops.com" style="color: var(--slate); text-decoration: none;">meridianops.com</a> &bull;
+        <a href="mailto:kevin@meridiansolutions.com" style="color: var(--slate); text-decoration: none;">kevin@meridiansolutions.com</a> &bull;
+        <a href="https://www.linkedin.com/in/barnettkevin/" style="color: var(--slate); text-decoration: none;">LinkedIn</a>
+      </p>
+      <p style="font-size: 0.7rem; color: var(--slate); margin-top: 0.5rem;">Business First. AI Enabled.</p>
+    </div>
+  </div>
+
+</body>
+</html>

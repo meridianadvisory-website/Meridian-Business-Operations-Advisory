@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 7 Operational Costs Professional Service Firms Overlook &mdash; Meridian Solutions</title>
+  <style>
+    :root {
+      --ink: #0B1F2A;
+      --teal: #0E7C86;
+      --teal-2: #14B8A6;
+      --paper: #F8FAFA;
+      --white: #FFFFFF;
+      --gray: #64748B;
+      --card-bg: rgba(14, 124, 134, 0.06);
+      --card-border: rgba(14, 124, 134, 0.18);
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; }
+    h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.75rem; color: var(--ink); }
+    h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    p { margin-bottom: 1rem; }
+    .text-gray { color: var(--gray); }
+    .text-teal { color: var(--teal); }
+    .divider { width: 48px; height: 3px; background: var(--teal); border-radius: 2px; margin: 1.5rem 0; }
+
+    /* Cover */
+    .cover { text-align: center; padding: 5rem 1.5rem; }
+    .cover .logo { font-size: 0.85rem; font-weight: 700; color: var(--teal); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2rem; }
+    .cover h1 { font-size: 2.4rem; max-width: 560px; margin: 0 auto 1rem; }
+    .cover .subtitle { font-size: 1.1rem; color: var(--gray); max-width: 480px; margin: 0 auto 2.5rem; }
+    .cover .credibility { font-size: 0.85rem; color: var(--gray); max-width: 520px; margin: 0 auto 1.5rem; font-style: italic; border-left: 3px solid var(--teal); padding-left: 1rem; text-align: left; }
+    .cover .footer-tag { font-size: 0.75rem; color: var(--gray); margin-top: 3rem; }
+
+    /* Opportunity */
+    .opportunity { margin-bottom: 3rem; padding-top: 1rem; }
+    .opportunity .number { font-size: 0.75rem; font-weight: 700; color: var(--teal); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.25rem; }
+    .section-label { font-size: 0.7rem; font-weight: 700; color: var(--teal); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.25rem; }
+    .section-body { margin-bottom: 1.25rem; font-size: 0.95rem; }
+    .overlooked { font-size: 0.85rem; color: var(--gray); font-style: italic; border-left: 3px solid var(--card-border); padding-left: 0.75rem; margin-top: 1rem; }
+
+    /* Quick Math card */
+    .quick-math {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .quick-math .qm-label { font-size: 0.7rem; font-weight: 700; color: var(--teal); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .quick-math .formula { font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 0.5rem; }
+    .quick-math .example { font-size: 0.9rem; color: var(--ink); margin-bottom: 0.4rem; }
+    .quick-math .benchmark { font-size: 0.8rem; color: var(--gray); margin-bottom: 0.3rem; }
+    .quick-math .assumption { font-size: 0.75rem; color: var(--gray); font-style: italic; }
+
+    /* Intro */
+    .intro-page { margin-bottom: 3rem; }
+    .pattern-list { list-style: none; padding: 0; margin: 1rem 0; }
+    .pattern-list li { position: relative; padding-left: 1.25rem; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .pattern-list li::before { content: "\2192"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+
+    /* Framework */
+    .framework { margin-bottom: 3rem; }
+    .framework-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .framework-step { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 1.25rem 1rem; text-align: center; }
+    .framework-step .step-name { font-size: 1rem; font-weight: 700; color: var(--teal); margin-bottom: 0.3rem; }
+    .framework-step .step-desc { font-size: 0.8rem; color: var(--gray); }
+
+    /* Priority rule */
+    .priority-rule { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .priority-rule .pr-label { font-size: 0.7rem; font-weight: 700; color: var(--teal); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+
+    /* Self-scorer */
+    .scorer { margin-bottom: 3rem; }
+    .scorer-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid rgba(14, 124, 134, 0.1); }
+    .scorer-item:last-of-type { border-bottom: none; }
+    .scorer-checkbox { flex-shrink: 0; width: 22px; height: 22px; border: 2px solid var(--teal); border-radius: 4px; margin-top: 2px; }
+    .scorer-question { font-size: 0.95rem; }
+    .scoring-band { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 1.5rem; }
+    .scoring-band .band { margin-bottom: 0.4rem; font-size: 0.9rem; }
+    .scoring-band .band strong { color: var(--teal); }
+
+    /* CTA */
+    .cta-page { text-align: center; }
+    .cta-page h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+    .cta-bullets { text-align: left; max-width: 480px; margin: 0 auto 1.5rem; list-style: none; padding: 0; }
+    .cta-bullets li { padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .cta-bullets li::before { content: "\2713"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+    .cta-guarantee { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 1.25rem 1.5rem; max-width: 520px; margin: 1.5rem auto; font-size: 0.9rem; }
+    .cta-button { display: inline-block; background: var(--teal); color: var(--white); font-weight: 700; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-size: 1rem; margin-top: 1.5rem; }
+    .cta-contact { font-size: 0.85rem; color: var(--gray); margin-top: 1.5rem; }
+    .footnote { font-size: 0.75rem; color: var(--gray); font-style: italic; margin-top: 2rem; border-top: 1px solid var(--card-border); padding-top: 1rem; }
+
+    /* Print */
+    @media print {
+      body { background: white; font-size: 11pt; }
+      .container { padding: 0; max-width: none; }
+      .cover { padding: 4rem 2rem; page-break-after: always; }
+      .intro-page { page-break-after: always; }
+      .opportunity { page-break-before: always; page-break-inside: avoid; }
+      .framework { page-break-before: always; }
+      .scorer { page-break-before: always; page-break-inside: avoid; }
+      .cta-page { page-break-before: always; page-break-inside: avoid; }
+      .quick-math, .scoring-band, .priority-rule, .cta-guarantee, .framework-step {
+        -webkit-print-color-adjust: exact; print-color-adjust: exact;
+      }
+      .cta-button { background: var(--teal) !important; color: white !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    /* Mobile */
+    @media (max-width: 600px) {
+      .container { padding: 2rem 1.25rem; }
+      .cover { padding: 3rem 1.25rem; }
+      .cover h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.2rem; }
+      .framework-steps { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 400px) {
+      .framework-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- COVER -->
+    <div class="cover">
+      <div class="logo">&#9650; Meridian Solutions</div>
+      <h1>The 7 Operational Costs Professional Service Firms Overlook</h1>
+      <p class="subtitle">Where billable hours disappear &mdash; and what it takes to get them back.</p>
+      <div class="credibility">
+        15 years diagnosing operational systems inside Fortune 500 environments. Meridian brings that discipline to firms of 10&ndash;75.
+      </div>
+      <p class="footer-tag">Meridian Solutions, LLC &middot; Operations Consulting for Professional Service Firms</p>
+    </div>
+
+    <!-- OPENING -->
+    <div class="intro-page">
+      <h2>Most SMBs are asking the wrong AI question.</h2>
+      <div class="divider"></div>
+      <p>Ask most SMB owners where AI fits, and you'll hear two answers: chatbots and social media content.</p>
+      <p>Both are useful. Neither is where the biggest money is.</p>
+      <p>The real opportunity is hiding inside operations &mdash; missed calls, slow quotes, dead leads, manual paperwork, tribal knowledge, poor routing, and billing leaks.</p>
+      <h3 style="margin-top: 2rem;">AI value lives in the gaps between your tools, people, and processes.</h3>
+      <p>The biggest AI opportunities don't look like AI. They look like:</p>
+      <ul class="pattern-list">
+        <li>A quote that took three days instead of three minutes</li>
+        <li>A missed call that never got returned</li>
+        <li>A lead database no one works anymore</li>
+        <li>A paper form someone retypes by hand</li>
+        <li>An invoice that went out late</li>
+        <li>A process only one employee understands</li>
+      </ul>
+    </div>
+
+    <!-- OPPORTUNITY 1: SPEED-TO-QUOTE -->
+    <div class="opportunity">
+      <div class="number">Opportunity 1</div>
+      <h2>Speed-to-Quote</h2>
+      <div class="divider"></div>
+      <div class="section-label">The Leak</div>
+      <p class="section-body">When a prospect asks for a price, the first business to respond usually wins &mdash; not the cheapest. Most SMBs take hours or days to turn an inquiry into a quote because someone has to stop what they're doing and build it by hand.</p>
+      <div class="section-label">The AI Opportunity</div>
+      <p class="section-body">AI can draft an accurate, on-brand estimate in minutes from the same inputs your team already collects &mdash; pulling from pricing history, job specs, and templates to generate a ready-to-send proposal.</p>
+      <div class="section-label">Business Impact</div>
+      <p class="section-body">Faster close rate, fewer lost leads, more booked opportunities. Your team stops losing deals to whoever responded first.</p>
+      <div class="quick-math">
+        <div class="qm-label">Quick Math</div>
+        <div class="formula">(leads/month) &times; (% lost to slow response) &times; (close rate) &times; (avg deal)</div>
+        <div class="example"><strong>Example:</strong> 40 leads/mo &times; 30% lost &times; 25% close &times; $3,000 &cong; $108k/yr at risk</div>
+        <div class="benchmark"><strong>Benchmark:</strong> Businesses that respond first win the majority of competitive quotes; 20&ndash;40% of slow-quoted leads are typically lost to a faster competitor.</div>
+        <div class="assumption">Assumption: "Lost to slow response" rate varies by vertical. Plug your own numbers.</div>
+      </div>
+      <div class="overlooked">Overlooked because owners see quoting as a sales problem, not an automation one.</div>
+    </div>
+
+    <!-- OPPORTUNITY 2: MISSED CALLS -->
+    <div class="opportunity">
+      <div class="number">Opportunity 2</div>
+      <h2>Missed Calls</h2>
+      <div class="divider"></div>
+      <div class="section-label">The Leak</div>
+      <p class="section-body">For home services, legal, and healthcare, a missed call is a lost customer &mdash; often a four- or five-figure one. Voicemail doesn't save it; the caller already dialed your competitor.</p>
+      <div class="section-label">The AI Opportunity</div>
+      <p class="section-body">An AI assistant that answers, qualifies, and books 24/7 turns those leaks back into revenue &mdash; capturing caller intent, scheduling appointments, and routing urgent requests without human involvement.</p>
+      <div class="section-label">Business Impact</div>
+      <p class="section-body">Recovered revenue from after-hours and overflow calls. No more lost customers to voicemail.</p>
+      <div class="quick-math">
+        <div class="qm-label">Quick Math</div>
+        <div class="formula">(missed calls/week) &times; (close rate) &times; (avg job value) &times; 52</div>
+        <div class="example"><strong>Example:</strong> 8 missed/week &times; 30% close &times; $1,200 avg job &cong; $150k/yr to voicemail</div>
+        <div class="benchmark"><strong>Benchmark:</strong> 62% of calls to small businesses go unanswered. Lifetime value of a captured call ranges $800&ndash;$5,000 depending on vertical.</div>
+        <div class="assumption">Assumption: Close rate assumes qualified callers with intent. Adjust for your answer rate.</div>
+      </div>
+      <div class="overlooked">Overlooked because owners treat after-hours calls as "just how it is" instead of a recoverable loss.</div>
+    </div>
+
+    <!-- OPPORTUNITY 3: DATABASE REACTIVATION -->
+    <div class="opportunity">
+      <div class="number">Opportunity 3</div>
+      <h2>Database Reactivation</h2>
+      <div class="divider"></div>
+      <div class="section-label">The Leak</div>
+      <p class="section-body">Every business is sitting on a list of past customers and dead leads it never works again. These are people who already know you, trusted you once, and might need you again.</p>
+      <div class="section-label">The AI Opportunity</div>
+      <p class="section-body">AI can personalize and run reactivation outreach at a scale no human team will &mdash; segmenting by recency, service history, and likelihood to convert, then delivering targeted messages across email, SMS, and direct mail.</p>
+      <div class="section-label">Business Impact</div>
+      <p class="section-body">The cheapest revenue you'll ever make. Reactivation campaigns routinely generate 5&ndash;15% response rates from "dead" lists.</p>
+      <div class="quick-math">
+        <div class="qm-label">Quick Math</div>
+        <div class="formula">(dormant contacts) &times; (reactivation response rate) &times; (close rate) &times; (avg value)</div>
+        <div class="example"><strong>Example:</strong> 2,000 contacts &times; 8% response &times; 40% close &times; $800 &cong; $51k recovered</div>
+        <div class="benchmark"><strong>Benchmark:</strong> 5&ndash;15% response rate on dormant lists is typical. Reactivation costs 5&ndash;10x less than new customer acquisition.</div>
+        <div class="assumption">Assumption: Response rate depends on list age and prior relationship quality.</div>
+      </div>
+      <div class="overlooked">Overlooked because it isn't shiny &mdash; the asset's been there the whole time.</div>
+    </div>
+
+    <!-- OPPORTUNITY 4: PAPER TO DATA -->
+    <div class="opportunity">
+      <div class="number">Opportunity 4</div>
+      <h2>Turning Paper into Data</h2>
+      <div class="divider"></div>
+      <div class="section-label">The Leak</div>
+      <p class="section-body">Intake forms, invoices, contracts, records, applications &mdash; the unstructured documents your business runs on. Your team retypes them into systems by hand, and it's slow and error-prone.</p>
+      <div class="section-label">The AI Opportunity</div>
+      <p class="section-body">AI extracts, structures, and routes that information automatically &mdash; reading forms, parsing invoices, pulling key terms from contracts, and feeding clean data directly into your systems.</p>
+      <div class="section-label">Business Impact</div>
+      <p class="section-body">Hours of manual data entry eliminated weekly. Fewer errors, faster processing, and staff freed for higher-value work.</p>
+      <div class="quick-math">
+        <div class="qm-label">Quick Math</div>
+        <div class="formula">(hours of manual entry/week) &times; (loaded hourly cost) &times; 52</div>
+        <div class="example"><strong>Example:</strong> 15 hrs/week &times; $28/hr &times; 52 &cong; $22k/yr in reclaimable labor + error reduction</div>
+        <div class="benchmark"><strong>Benchmark:</strong> AI document processing reduces manual entry time by 70&ndash;90%. Error rates drop from 3&ndash;5% to under 1%.</div>
+        <div class="assumption">Assumption: Loaded cost includes salary + benefits + overhead. Adjust for your team's rate.</div>
+      </div>
+      <div class="overlooked">Overlooked because it's invisible back-office drudgery, so no one champions fixing it.</div>
+    </div>
+
+    <!-- OPPORTUNITY 5: TRIBAL KNOWLEDGE -->
+    <div class="opportunity">
+      <div class="number">Opportunity 5</div>
+      <h2>Capturing Tribal Knowledge</h2>
+      <div class="divider"></div>
+      <div class="section-label">The Leak</div>
+      <p class="section-body">Your most experienced employee carries years of judgment in their head &mdash; and one day they retire, quit, or get sick. That knowledge walks out the door with them.</p>
+      <div class="section-label">The AI Opportunity</div>
+      <p class="section-body">AI can codify how your top performers actually do the work into searchable, trainable systems &mdash; capturing decision logic, troubleshooting steps, and institutional knowledge that new hires can access immediately.</p>
+      <div class="section-label">Business Impact</div>
+      <p class="section-body">Faster onboarding, consistent service quality, and reduced dependency on any single person. The business becomes more resilient.</p>
+      <div class="quick-math">
+        <div class="qm-label">Quick Math</div>
+        <div class="formula">(new hires/yr) &times; (weeks to ramp) &times; (weekly loaded cost) + single-point-of-failure risk</div>
+        <div class="example"><strong>Example:</strong> 3 hires/yr &times; 8 weeks &times; $1,500/wk &cong; $36k/yr in slow ramp, before turnover risk</div>
+        <div class="benchmark"><strong>Benchmark:</strong> Average cost to replace a skilled employee is 50&ndash;200% of annual salary. Knowledge loss multiplies that figure.</div>
+        <div class="assumption">Assumption: Ramp time varies by role complexity. Key-person departure risk is additive.</div>
+      </div>
+      <div class="overlooked">Overlooked because owners don't see tribal knowledge as an asset until it walks out the door.</div>
+    </div>
+
+    <!-- OPPORTUNITY 6: TRIAGE & ROUTING -->
+    <div class="opportunity">
+      <div class="number">Opportunity 6</div>
+      <h2>Triage &amp; Intelligent Routing</h2>
+      <div class="divider"></div>
+      <div class="section-label">The Leak</div>
+      <p class="section-body">Not every inquiry deserves the same attention, but most businesses treat them identically &mdash; burning your best people on low-value requests while high-value opportunities wait in the same queue.</p>
+      <div class="section-label">The AI Opportunity</div>
+      <p class="section-body">AI can qualify, prioritize, and route so humans only touch what actually needs them &mdash; scoring leads by value, routing service requests by urgency, and auto-handling routine inquiries.</p>
+      <div class="section-label">Business Impact</div>
+      <p class="section-body">Your best people work on your best opportunities. Response time drops for high-value requests. Low-value tasks get handled without human involvement.</p>
+      <div class="quick-math">
+        <div class="qm-label">Quick Math</div>
+        <div class="formula">(high-value staff hours/week on low-value tasks) &times; (loaded hourly cost) &times; 52</div>
+        <div class="example"><strong>Example:</strong> 10 hrs/week &times; $60/hr &times; 52 &cong; $31k/yr of senior time misallocated &mdash; per person</div>
+        <div class="benchmark"><strong>Benchmark:</strong> Intelligent routing typically reclaims 20&ndash;40% of senior staff time for higher-value activities.</div>
+        <div class="assumption">Assumption: Loaded rate for senior/specialized staff. Multiply by headcount affected.</div>
+      </div>
+      <div class="overlooked">Overlooked because "we handle everything ourselves" feels like good service, not a bottleneck.</div>
+    </div>
+
+    <!-- OPPORTUNITY 7: CASH-FLOW LEAKS -->
+    <div class="opportunity">
+      <div class="number">Opportunity 7</div>
+      <h2>Plugging Cash-Flow Leaks</h2>
+      <div class="divider"></div>
+      <div class="section-label">The Leak</div>
+      <p class="section-body">Unbilled work, invoices that went out late, payments that slipped through reconciliation. The revenue was earned &mdash; it just never got collected cleanly.</p>
+      <div class="section-label">The AI Opportunity</div>
+      <p class="section-body">AI can flag the gaps in your billing and AR before they cost you &mdash; identifying unbilled time, surfacing overdue invoices, catching reconciliation mismatches, and automating follow-up sequences.</p>
+      <div class="section-label">Business Impact</div>
+      <p class="section-body">Revenue that was already earned gets collected. Cash flow becomes more predictable. Finance stops being a source of silent loss.</p>
+      <div class="quick-math">
+        <div class="qm-label">Quick Math</div>
+        <div class="formula">(annual revenue) &times; (% lost to unbilled/late/leakage)</div>
+        <div class="example"><strong>Example:</strong> $2M revenue &times; 2% leakage &cong; $40k/yr earned but never cleanly collected</div>
+        <div class="benchmark"><strong>Benchmark:</strong> 1&ndash;5% of revenue commonly leaks through billing/AR gaps. Professional services firms often see 5&ndash;10%.</div>
+        <div class="assumption">Assumption: Leakage rate varies by billing complexity and AR process maturity.</div>
+      </div>
+      <div class="overlooked">Overlooked because it's finance, not "tech," so it never makes the AI conversation.</div>
+    </div>
+
+    <p class="footnote">Illustrative ranges. Your actual numbers will differ &mdash; that's what the Value Map measures.</p>
+
+    <!-- FRAMEWORK -->
+    <div class="framework">
+      <h2>The Meridian AI Value Map</h2>
+      <p class="text-gray">A practical way to find, size, and prioritize the AI opportunities already hiding inside your business.</p>
+      <div class="divider"></div>
+      <div class="framework-steps">
+        <div class="framework-step"><div class="step-name">Find</div><div class="step-desc">Identify workflow gaps, manual tasks, missed follow-ups, and bottlenecks.</div></div>
+        <div class="framework-step"><div class="step-name">Size</div><div class="step-desc">Estimate the dollar impact behind each opportunity.</div></div>
+        <div class="framework-step"><div class="step-name">Prioritize</div><div class="step-desc">Rank by ROI, effort, urgency, and feasibility.</div></div>
+        <div class="framework-step"><div class="step-name">Automate</div><div class="step-desc">Build a practical roadmap using AI and workflow tools.</div></div>
+      </div>
+      <div class="priority-rule">
+        <div class="pr-label">Where to Start</div>
+        <p style="font-size: 0.95rem; margin: 0;">Start with leaks on revenue you've already earned &mdash; Missed Calls, Speed-to-Quote, and Cash-Flow Leaks pay back fastest. Database Reactivation is the cheapest dollar you'll ever make.</p>
+      </div>
+    </div>
+
+    <!-- SELF-SCORER -->
+    <div class="scorer">
+      <h2>How Many Leaks Are You Running?</h2>
+      <p class="text-gray">One question per opportunity. Check the boxes that apply to your business.</p>
+      <div class="divider"></div>
+      <div class="scorer-item"><div class="scorer-checkbox"></div><div class="scorer-question">Does any inquiry ever wait more than an hour for a quote?</div></div>
+      <div class="scorer-item"><div class="scorer-checkbox"></div><div class="scorer-question">Do calls go to voicemail after hours or during busy periods?</div></div>
+      <div class="scorer-item"><div class="scorer-checkbox"></div><div class="scorer-question">Is there a list of past customers or leads no one actively works?</div></div>
+      <div class="scorer-item"><div class="scorer-checkbox"></div><div class="scorer-question">Does anyone retype information from forms, invoices, or PDFs by hand?</div></div>
+      <div class="scorer-item"><div class="scorer-checkbox"></div><div class="scorer-question">Would the business hurt if one key employee left tomorrow?</div></div>
+      <div class="scorer-item"><div class="scorer-checkbox"></div><div class="scorer-question">Do your best people spend time on low-value routine requests?</div></div>
+      <div class="scorer-item"><div class="scorer-checkbox"></div><div class="scorer-question">Has billable work ever gone unbilled, late, or uncollected?</div></div>
+      <div class="scoring-band">
+        <div class="band"><strong>1&ndash;2 yeses:</strong> You have isolated leaks. Worth investigating.</div>
+        <div class="band"><strong>3&ndash;4 yeses:</strong> You're likely leaving mid-five-figures on the table annually.</div>
+        <div class="band"><strong>5+ yeses:</strong> You're likely leaking six figures a year in recoverable value.</div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-page">
+      <h2>Find the AI Opportunities Already Hiding Inside Your Business</h2>
+      <p class="text-gray">The Meridian AI Value Map gives you:</p>
+      <ul class="cta-bullets">
+        <li>A clear view of where your business is leaking time, revenue, and follow-up</li>
+        <li>A prioritized list of AI opportunities with estimated business impact</li>
+        <li>A practical roadmap without jargon or unnecessary complexity</li>
+        <li>The confidence to invest only where the math works</li>
+      </ul>
+      <div class="cta-guarantee">
+        <p style="margin: 0; font-weight: 600; color: var(--teal);">The 3&times; Guarantee</p>
+        <p style="margin: 0.5rem 0 0;">If we don't find at least 3&times; the fee in recoverable value, you don't pay. And if you move forward, the full fee credits toward implementation.</p>
+      </div>
+      <p style="font-size: 0.95rem; max-width: 480px; margin: 1.5rem auto; color: var(--gray);">
+        The call isn't a pitch &mdash; it's where we decide whether a fixed-scope AI Value Map makes sense for your operation.
+      </p>
+      <a href="https://calendly.com/meridian_assessment/30min" class="cta-button">Book a 20-Minute AI Opportunity Call</a>
+      <p class="cta-contact">Kevin Barnett &middot; Meridian Solutions, LLC &middot; [email TBD]</p>
+    </div>
+
+  </div>
+</body>
+</html>
