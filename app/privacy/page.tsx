@@ -8,7 +8,15 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <main style={{ position: 'relative', zIndex: 1, minHeight: '100vh' }}>
+    <main
+      style={{
+        position: 'relative',
+        zIndex: 1,
+        minHeight: '100vh',
+        backgroundColor: 'var(--navy)',
+        fontFamily: 'var(--font-sora), sans-serif',
+      }}
+    >
       <div style={{ maxWidth: '720px', margin: '0 auto', padding: '4rem 2rem 6rem' }}>
         <Link
           href="/"
@@ -19,16 +27,33 @@ export default function PrivacyPage() {
             color: 'var(--teal)',
             textDecoration: 'none',
             fontSize: '0.85rem',
+            fontFamily: 'var(--font-sora), sans-serif',
             marginBottom: '2rem',
           }}
         >
           &larr; Back to Meridian
         </Link>
 
-        <h1 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', marginBottom: '0.5rem' }}>
+        <h1
+          style={{
+            fontSize: 'clamp(1.8rem, 3vw, 2.4rem)',
+            fontFamily: 'var(--font-sora), sans-serif',
+            fontWeight: 800,
+            letterSpacing: '-0.035em',
+            color: 'var(--white)',
+            marginBottom: '0.5rem',
+          }}
+        >
           Privacy Policy
         </h1>
-        <p style={{ color: 'var(--gray-2)', fontSize: '0.85rem', marginBottom: '3rem' }}>
+        <p
+          style={{
+            color: 'var(--gray-2)',
+            fontSize: '0.85rem',
+            fontFamily: 'var(--font-dm-mono), monospace',
+            marginBottom: '3rem',
+          }}
+        >
           Last updated: January 2025
         </p>
 
@@ -102,9 +127,7 @@ export default function PrivacyPage() {
             </ul>
             <p>
               To exercise any of these rights, contact us at{' '}
-              <a href="mailto:info@meridianadvisor.co" style={{ color: 'var(--teal)' }}>
-                info@meridianadvisor.co
-              </a>.
+              <a href="mailto:info@meridianadvisor.co">info@meridianadvisor.co</a>.
             </p>
           </section>
 
@@ -126,9 +149,7 @@ export default function PrivacyPage() {
             <h2>Contact</h2>
             <p>
               Questions about this policy? Reach us at{' '}
-              <a href="mailto:info@meridianadvisor.co" style={{ color: 'var(--teal)' }}>
-                info@meridianadvisor.co
-              </a>.
+              <a href="mailto:info@meridianadvisor.co">info@meridianadvisor.co</a>.
             </p>
             <p style={{ marginTop: '0.5rem' }}>
               Meridian Solutions, LLC<br />
@@ -139,19 +160,26 @@ export default function PrivacyPage() {
       </div>
 
       <style>{`
+        .legal-content {
+          font-family: var(--font-sora), sans-serif;
+        }
         .legal-content section {
           margin-bottom: 2.5rem;
         }
         .legal-content h2 {
+          font-family: var(--font-sora), sans-serif;
           font-size: 1.2rem;
           font-weight: 700;
           color: var(--white);
           margin-bottom: 0.75rem;
+          letter-spacing: -0.02em;
         }
         .legal-content p {
+          font-family: var(--font-sora), sans-serif;
           color: var(--gray);
           line-height: 1.8;
           margin-bottom: 0.75rem;
+          font-size: 0.95rem;
         }
         .legal-content ul {
           color: var(--gray);
@@ -159,17 +187,23 @@ export default function PrivacyPage() {
           margin-bottom: 0.75rem;
         }
         .legal-content li {
+          font-family: var(--font-sora), sans-serif;
           margin-bottom: 0.4rem;
           line-height: 1.7;
+          font-size: 0.95rem;
         }
         .legal-content strong {
           color: var(--white);
+          font-weight: 600;
         }
         .legal-content a {
+          color: var(--teal);
           text-decoration: none;
+          transition: opacity 0.15s ease;
         }
         .legal-content a:hover {
           text-decoration: underline;
+          opacity: 0.85;
         }
       `}</style>
     </main>
