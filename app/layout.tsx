@@ -21,14 +21,14 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://meridianadvisor.co'),
   title: 'Meridian | Business Operations Advisory',
   description:
-    "Meridian helps growing service businesses eliminate operational bottlenecks, streamline workflows, and strategically implement practical AI. Business First. AI Enabled.",
+    "Meridian helps growing service businesses fix how work actually gets done — improving operations first, then applying technology only where it produces measurable results. Business First. AI Enabled.",
   alternates: {
     canonical: 'https://meridianadvisor.co',
   },
   openGraph: {
     title: 'Meridian | Business Operations Advisory',
     description:
-      "Meridian helps growing service businesses eliminate operational bottlenecks and build organizations that scale. Business First. AI Enabled.",
+      "Meridian helps growing service businesses fix how work actually gets done — improving operations first, then applying technology only where it produces measurable results. Business First. AI Enabled.",
     url: 'https://meridianadvisor.co',
     type: 'website',
     images: [
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Meridian | Business Operations Advisory',
     description:
-      "Meridian helps growing service businesses eliminate operational bottlenecks and build organizations that scale. Business First. AI Enabled.",
+      "Meridian helps growing service businesses fix how work actually gets done — improving operations first, then applying technology only where it produces measurable results. Business First. AI Enabled.",
     images: ['/og-image.png'],
   },
 };

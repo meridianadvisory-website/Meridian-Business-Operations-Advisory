@@ -72,13 +72,10 @@ export default function Page() {
         <div className="mx-auto max-w-4xl relative">
           <p className="mb-6 text-[13px] font-medium uppercase tracking-[0.2em] text-gold">Business Operations Advisory &middot; For service businesses with 20&ndash;150 employees</p>
           <h1 className="font-manrope text-[2.5rem] font-extrabold leading-[1.08] tracking-[-0.03em] text-navy md:text-[3.75rem]">
-            Stop Managing<br className="hidden md:inline" /> Operational Chaos.
+            Growth shouldn&rsquo;t make your<br className="hidden md:inline" /> business harder to run.
           </h1>
-          <h2 className="mt-2 font-manrope text-[2.5rem] font-extrabold leading-[1.08] tracking-[-0.03em] text-navy/60 md:text-[3.75rem]">
-            Start Building a Business<br className="hidden md:inline" /> That Scales.
-          </h2>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-slate">
-            Meridian helps growing service businesses eliminate operational bottlenecks, streamline workflows, and strategically implement practical AI&mdash;so leadership can focus on growth instead of constantly solving operational problems.
+            As you add people and customers, operations get heavier and leadership gets pulled into the day-to-day. Meridian helps growing service businesses fix how work actually gets done&mdash;and applies technology only where it produces measurable results.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link href={BOOKING_HREF} className="inline-flex items-center gap-2 rounded-md bg-navy px-6 py-3 text-sm font-semibold text-ivory hover:bg-navy-light hover:shadow-md hover:-translate-y-[1px] transition-all focus:ring-2 focus:ring-navy/30 focus:ring-offset-2">
@@ -96,7 +93,7 @@ export default function Page() {
         <div className="mx-auto max-w-3xl">
           <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.2em] text-gold">The Problem</p>
           <h2 className="font-manrope text-2xl font-bold text-navy md:text-[2rem]">
-            Growth Shouldn&rsquo;t Make Your Business Harder to Run.
+            Growth compounds every operational weakness.
           </h2>
           <div className="mt-8 space-y-3 text-base leading-relaxed text-slate border-l-2 border-gray-200 pl-5">
             <p>&mdash; Processes become inconsistent as you add people.</p>
@@ -120,7 +117,7 @@ export default function Page() {
             Technology Doesn&rsquo;t Transform Businesses.<br />Better Operations Do.
           </h2>
           <p className="mt-8 text-base leading-relaxed text-gray-400 max-w-xl mx-auto">
-            AI creates value only when built on strong operational foundations. Meridian helps organizations understand how work gets done, identify opportunities for improvement, and apply technology where it produces measurable business results.
+            AI creates value only when built on strong operational foundations. Meridian helps organizations understand how work gets done, find where it breaks down, and apply technology where it produces measurable business results.
           </p>
           <p className="mt-8 text-sm font-semibold text-gold tracking-wide">Business first. Technology second.</p>
         </div>
@@ -131,18 +128,18 @@ export default function Page() {
         <div className="mx-auto max-w-3xl">
           <p className="text-[13px] font-medium uppercase tracking-[0.2em] text-gold mb-4">Why Leadership Teams Choose Meridian</p>
           <h2 className="font-manrope text-2xl font-bold text-navy md:text-3xl">
-            Trusted Business Operations Advisors for Growing Companies
+            Operations advisors for companies built to scale.
           </h2>
           <p className="mt-4 text-base text-slate leading-relaxed">
             We partner with leadership teams to improve operational performance, align technology with business strategy, and build organizations that scale.
           </p>
           <div className="mt-10 grid gap-0 divide-y divide-gray-200">
             {[
-              { title: 'Enterprise Operational Experience', desc: '15+ years diagnosing and fixing systems inside Fortune 500 environments.' },
-              { title: 'Business-First Advisory', desc: 'We improve operations before recommending technology. Always.' },
+              { title: 'Enterprise Operational Experience', desc: '15+ years diagnosing and fixing the systems that run Fortune 500 operations.' },
+              { title: 'Business-First Advisory', desc: 'We improve how the business runs before we recommend a single tool. Always.' },
               { title: 'Vendor-Neutral Guidance', desc: 'No platform partnerships. No software commissions. Only what works for you.' },
-              { title: 'Structured Methodology', desc: 'The ALIGN\u2122 Framework provides repeatable, measurable outcomes.' },
-              { title: 'Executive Communication', desc: 'We speak your language\u2014ROI, capacity, growth\u2014not technical jargon.' },
+              { title: 'Structured Methodology', desc: 'The ALIGN\u2122 Framework turns diagnosis into repeatable, measurable outcomes.' },
+              { title: 'Executive Communication', desc: 'We speak in ROI, capacity, and growth \u2014 not technical jargon.' },
               { title: 'Measurable Business Outcomes', desc: 'Every engagement produces quantified results you can track.' },
             ].map((item) => (
               <div key={item.title} className="py-4 md:grid md:grid-cols-[200px_1fr] md:gap-6 md:items-baseline">
@@ -159,7 +156,7 @@ export default function Page() {
         <div className="mx-auto max-w-3xl">
           <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.2em] text-gold">The ALIGN&trade; Framework</p>
           <h2 className="font-manrope text-2xl font-bold text-navy md:text-[2rem]">
-            A Proven Framework for Better Business Performance
+            A structured path to better business performance.
           </h2>
           <div className="mt-12 space-y-0">
             {phases.map((phase, i) => (
@@ -213,7 +210,7 @@ export default function Page() {
                 name: 'Meridian Executive Advisory\u2122',
                 subtitle: 'Executive Advisory Partnership',
                 challenge: 'You need ongoing strategic guidance as you grow\u2014someone who thinks like a COO without the full-time cost.',
-                outcome: 'Continuous operational improvement, strategic technology decisions, and measurable performance gains.',
+                outcome: 'Continuous operational improvement, sound technology decisions, and measurable performance gains.',
                 deliverables: 'Fractional advisory, quarterly reviews, implementation support, team training.',
               },
             ].map((svc) => (
@@ -294,7 +291,7 @@ export default function Page() {
             <div className="rounded-lg border border-gray-200 bg-lightgray p-7">
               <h3 className="font-manrope text-base font-bold text-navy">Meridian Executive Briefing</h3>
               <p className="mt-2 text-sm text-slate leading-relaxed">
-                Understand Meridian&rsquo;s approach, the ALIGN&trade; Framework, and our engagement paths. Useful for sharing with your leadership team or business partner.
+                Understand Meridian&rsquo;s approach, the ALIGN&trade; Framework, and our engagement paths. Built to share with your leadership team or business partner.
               </p>
               <Link href="/executive-overview" className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-gold hover:underline underline-offset-4 transition">
                 Download the Overview <ChevronRight className="h-3.5 w-3.5" />
